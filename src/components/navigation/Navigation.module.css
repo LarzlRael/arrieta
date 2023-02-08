@@ -1,0 +1,69 @@
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  /* background: orange; */
+  align-items: center;
+  /* background image */
+  position: relative;
+}
+.Link {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-family: "arial", sans-serif;
+  transition: 0.5s ease all;
+}
+.Link:hover {
+  color: var(--orange);
+  font-weight: 500;
+  border-bottom: 2px solid var(--orange);
+}
+.NavigationLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: white */
+  display: flex;
+}
+.NavigationLogoWithLinks {
+  display: none;
+}
+.NavigationLinks {
+}
+@media (max-width: 480px) {
+  .Navigation {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .Link {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .NavigationLogo {
+    display: none;
+  }
+  .NavigationLogoWithLinks {
+    display: flex;
+    background: var(--orange);
+    align-items: center;
+    padding: 0.5rem;
+    width: 100vw;
+  }
+  .NavigationLinks_open {
+    position: absolute;
+    background: var(--orange);
+    transform: translateX(0%);
+    transition: 0.4s ease all;
+    width: 100vw;
+  }
+  .NavigationLinks_close {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 0.4s ease all;
+  }
+}

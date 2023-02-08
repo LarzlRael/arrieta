@@ -1,0 +1,23 @@
+.Footer {
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+}
+.Footer div h2 {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  text-align: start;
+  color: #2c2c2c;
+}
+.Footer div label {
+  display: block;
+  margin: 0.7rem 0;
+  color: #7d7d7d;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .Footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

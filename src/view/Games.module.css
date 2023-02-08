@@ -1,0 +1,40 @@
+.GameInfo {
+  width: 40%;
+}
+.GameContainer {
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      90deg,
+      rgba(118, 118, 118, 1) 0%,
+      rgba(255, 255, 255, 1) 61%,
+      rgba(117, 117, 118, 1) 99%
+    ),
+    url("https://res.cloudinary.com/daij4l3is/image/upload/v1675375946/xgvi7dc8vuv8ywbxvfdp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.GameImageContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  padding: 0 5rem;
+}
+.GameImage {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .GameImage{
+    width: 90%;
+  }
+}
