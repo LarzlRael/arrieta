@@ -1,7 +1,7 @@
 import { Label } from '../text/Label'
 import { H2 } from '../text/H2'
 import FooterStyles from './Footer.module.css'
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTiktok } from 'react-icons/io5'
+import { IoLocation, IoLocationOutline, IoLogoFacebook, IoLogoInstagram, IoLogoTiktok, IoMap } from 'react-icons/io5'
 import { BoxFlex, Box } from '../box'
 export const Footer = () => {
   return (
@@ -15,6 +15,7 @@ export const Footer = () => {
               <IoLogoFacebook size={30} />
               <IoLogoInstagram size={30} />
               <IoLogoTiktok size={30} />
+              <IoLocationOutline size={30} />
             </BoxFlex>
           </div>
         </div>

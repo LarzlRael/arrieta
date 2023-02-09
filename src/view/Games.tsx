@@ -45,9 +45,10 @@ export const Games = () => {
         Handmake <Span color="var(--orange)">high Quality</Span> control
       </H2>
       <div className={styles.GameImageContainer}>
-        {images.map((img) => {
+        {images.map((img,i) => {
           return (
             <img
+              key={i}
               style={{
                 width: '100%',
               }}

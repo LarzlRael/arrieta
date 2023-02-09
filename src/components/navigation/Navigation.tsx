@@ -38,7 +38,7 @@ export const Navigation = () => {
           }
         >
           {links.map((link) => (
-            <NavLink className={styles.Link} to={`${link}`} key={link}>
+            <NavLink className={styles.Link} to={link} key={link}>
               {capitalizeFirstLetter(link)}
             </NavLink>
           ))}
