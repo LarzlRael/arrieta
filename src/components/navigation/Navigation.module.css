@@ -1,10 +1,11 @@
 .Navigation {
   display: flex;
   justify-content: space-between;
-  /* background: orange; */
+  background: var(--pink);
   align-items: center;
   /* background image */
   position: relative;
+/*   padding: 2rem; */
 }
 .Link {
   text-decoration: none;

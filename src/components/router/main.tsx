@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom'
 import { Blog } from '../../view/Blog'
 import { Games } from '../../view/Games'
+import { Category } from '../../view/Category'
+import { Error404 } from '../../view/404/Error404'
 
 export const MainRoutes = () => {
   return (
@@ -14,7 +16,8 @@ export const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Blog />} />
         <Route path="/games" element={<Games />} />
-        <Route path="/*" element={<div>No elemento</div>} />
+        <Route path="/categorias/:categoria" element={<Category />} />
+        <Route path="/*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   )

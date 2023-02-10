@@ -4,8 +4,12 @@ import { H2 } from '../components/text'
 import { NormalButton } from '../components/buttons'
 import styled from 'styled-components'
 import { Footer } from '../components/navigation/Footer'
+import useAxiosAuth from '../components/hook/useAxiosAuth'
+import { useNavigate } from 'react-router-dom'
+import { Loading, Loading3 } from '../components/loading/Loading'
 
-export const Blog = () => {
+export const Blog = (props:any) => {
+  const history = useNavigate()
   const categories = [
     {
       titleButton: 'Collares',
@@ -27,6 +31,9 @@ export const Blog = () => {
       gridArea: 'b3',
     },
   ]
+  const { response, loading } = useAxiosAuth<any[]>({
+    url: `products/categories/`,
+  })
   return (
     <>
       <div className={styles.BlogContainer}>
@@ -94,15 +101,32 @@ export const Blog = () => {
         Explore out jewellery Collections by categories
       </H2>
       <div className={styles.BlogCategories}>
-        <BlogSquare
+        {/*  <BlogSquare
           titleButton="Collares"
           backgroundUrl="https://css.brilliantearth.com/static/img/gateway/GiftsTile_1152x648.jpg"
           gridArea="b1"
-        />
-        {categories.map((category) => {
-          return <BlogSquare key={category.titleButton} {...category} />
-        })}
+        /> */}
+        {!loading ? (
+          response.map((category, index) => {
+            return (
+              <BlogSquare
+                key={category.name}
+                titleButton={category.name}
+                navigateFunction={history}
+                backgroundUrl={
+                  category.image
+                    ? category.image.src
+                    : 'https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg'
+                }
+                id={category.id}
+              />
+            )
+          })
+        ) : (
+          <Loading />
+        )}
       </div>
+
       <Footer />
     </>
   )
@@ -113,19 +137,34 @@ const ContainerBackGround = styled.div<any>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  grid-area: ${(props) => props.gridArea};
+  /* grid-area: ${(props) => props.gridArea}; */
   display: flex;
   align-items: center;
   justify-content: center;
 `
-const BlogSquare = ({ titleButton, backgroundUrl, gridArea }: any) => {
+
+const BlogSquare = ({
+  titleButton,
+  backgroundUrl,
+  gridArea,
+  id,
+  navigateFunction,
+  ...props
+}: any) => {
+  /* const history = useNavigate() */
+
   return (
     <ContainerBackGround
       /* className={className} */
       backgroundUrl={backgroundUrl}
       gridArea={gridArea}
     >
-      <button className={styles.BlogButton}>{titleButton}</button>
+      <button
+        className={styles.BlogButton}
+        onClick={() => navigateFunction(`/categorias/${id}`)}
+      >
+        {titleButton}
+      </button>
     </ContainerBackGround>
   )
 }

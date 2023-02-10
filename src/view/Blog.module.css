@@ -25,8 +25,8 @@
 }
 .BlogCategories {
   display: grid;
-  grid-template-areas: "b1 b2" "b1 b3";
-  height: 500px;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  height: 300px;
   padding: 2rem 5rem;
   gap: 1.5rem;
 }
@@ -47,9 +47,10 @@
 /* media querys */
 @media (max-width: 768px) {
   .BlogCategories {
-    grid-template-areas: "b1" "b2" "b3";
+      height: 700px;
     padding: 1rem;
     gap: 1rem;
+    /* grid-template-columns: 1fr; */
   }
   .BlogInfo {
     width: 100%;
