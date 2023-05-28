@@ -9,13 +9,6 @@ import { MainRoutes } from './components/router/main'
 function App() {
   return (
     <div>
-      {/* <ToolTip content="que fue gente">
-        <button onClick={changeComponent}>que fue gente</button>
-      </ToolTip>
-      <ToolTip content="Borrar">
-        <button onClick={clearComponent}>que fue gente</button>
-      </ToolTip>
-      {count && count} */}
       <Theme>
         <MainRoutes />
       </Theme>

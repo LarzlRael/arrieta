@@ -22,7 +22,7 @@
 .page404__home-text a {
   outline: none;
   text-decoration: none;
-  background: var(--orange);
+  background: var(--primaryColor);
   color: white;
   font-size: 18px;
   border: none;

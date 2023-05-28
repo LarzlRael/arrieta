@@ -11,7 +11,7 @@ export const Theme = (props: ThemeProps) => {
         color={{
           white: '#fff',
           pink: '#d7b7a1',
-          orange: '#f77031',
+          primaryColor: '#f77031',
           orangeRGB: '247, 112, 49',
         }}
       />
@@ -25,7 +25,7 @@ const ThemeStyle = createGlobalStyle<any>`
     :root {
         --white: ${(props) => props.color.white};
         --pink: ${(props) => props.color.pink};
-        --orange: ${(props) => props.color.orange};
+        --primaryColor: ${(props) => props.color.primaryColor};
         --orangeRGB: ${(props) => props.color.orangeRGB};
         /* --white2: ${(props) => props.color.white2};
         --orange2: ${(props) => props.color.orange2};
@@ -40,5 +40,3 @@ const ThemeStyle = createGlobalStyle<any>`
       font-family: 'arial', sans-serif;
     }
 `
-
-const mapStateToProps = Theme

@@ -29,7 +29,7 @@ export const ToolTip = ({
           style={{
             fontSize: '0.9rem',
             /* fontWeight: '500', */
-            color: 'var(--orange)',
+            color: 'var(--primaryColor)',
           }}
         >
           {content}

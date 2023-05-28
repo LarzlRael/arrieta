@@ -50,7 +50,7 @@ div {
     border: 8px solid #fff;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: var(--orange) transparent transparent transparent;
+    border-color: var(--primaryColor) transparent transparent transparent;
     }
 div:nth-child(1) {
     animation-delay: -0.45s;
@@ -86,7 +86,7 @@ export const Loading2 = styled.div`
   &::after {
     animation: loader 2s linear infinite;
     content: '';
-    border: 10px solid var(--orange);
+    border: 10px solid var(--primaryColor);
     width: 100px;
     height: 100px;
     position: absolute;

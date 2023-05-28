@@ -7,7 +7,6 @@ const ButtonStyle = styled.button<{
 }>`
   padding: 10px 3rem;
   border-radius: 150px;
-  /* background: var(--orange2); */
   font-size: 1rem;
   border: ${({ ghost, background }) =>
     ghost ? `1px solid ${background}` : 'transparent'};
@@ -21,8 +20,9 @@ const ButtonStyle = styled.button<{
   transition: all 0.4s ease all;
   &:hover {
     border: 1px solid
-      ${(props) => (props.background ? 'var(--orange)' : 'var(--orange)')};
-    color: ${(props) => (props.ghost ? 'var(--orange)' : 'white')};
+      ${(props) =>
+        props.background ? 'var(--primaryColor)' : 'var(--primaryColor)'};
+    color: ${(props) => (props.ghost ? 'var(--primaryColor)' : 'white')};
   }
   &:disabled {
     opacity: 0.2;

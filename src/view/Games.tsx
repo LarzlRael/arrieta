@@ -21,7 +21,7 @@ export const Games = () => {
             Special Package{' '}
             <span
               style={{
-                color: 'var(--orange)',
+                color: 'var(--primaryColor)',
               }}
             >
               Jewery
@@ -42,7 +42,7 @@ export const Games = () => {
         margin="2rem 0"
         fontSizeResponsive="1rem"
       >
-        Handmake <Span color="var(--orange)">high Quality</Span> control
+        Handmake <Span color="var(--primaryColor)">high Quality</Span> control
       </H2>
       <div className={styles.GameImageContainer}>
         {images.map((img,i) => {
@@ -58,7 +58,7 @@ export const Games = () => {
           )
         })}
       </div>
-      <H2 color="var(--orange)" fontSize="1rem" margin="2rem 0">
+      <H2 color="var(--primaryColor)" fontSize="1rem" margin="2rem 0">
         Ver más
       </H2>
       <Box
@@ -68,7 +68,7 @@ export const Games = () => {
         marginResponsive="0 1rem"
       >
         <H2 color="white" fontSize="2.5rem">
-          Must <Span color="var(--orange)">Have</Span> collection
+          Must <Span color="var(--primaryColor)">Have</Span> collection
         </H2>
         <Label
           textAlign="center"
@@ -77,7 +77,7 @@ export const Games = () => {
           fontSize="1.2rem"
           marginResponsive="1rem 0"
         >
-          <Span color="var(--orange)">PANJEL</Span> dolor, sit amet consectetur
+          <Span color="var(--primaryColor)">PANJEL</Span> dolor, sit amet consectetur
           adipisicing elit. Excepturi maxime dolor voluptates laudantium fuga
           eum ipsam vero. Architecto odio, quasi consequuntur animi non
           doloribus, soluta recusandae consequatur, ea commodi sapiente?
@@ -94,7 +94,7 @@ export const Games = () => {
             className={styles.GameImage}
           />
         </BoxFlex>
-        <H2 margin="1rem 0" fontSize="1rem" color="var(--orange)">
+        <H2 margin="1rem 0" fontSize="1rem" color="var(--primaryColor)">
           Descubre nuestra colección
         </H2>
       </Box>
@@ -117,8 +117,8 @@ export const Games = () => {
             textAlign="start"
             margin="0 0 2rem 0"
           >
-            Higher Value <Span color="var(--orange)">Collaboration</Span> with{' '}
-            <Span color="var(--orange)">Lower</Span> Cost Per Wear
+            Higher Value <Span color="var(--primaryColor)">Collaboration</Span> with{' '}
+            <Span color="var(--primaryColor)">Lower</Span> Cost Per Wear
           </H2>
           <Label
             textAlign="start"
@@ -126,7 +126,7 @@ export const Games = () => {
             fontSize="1.1rem"
             lineHeight="1.6"
           >
-            <Span color="var(--orange)">PANJEL</Span> dolor, sit amet
+            <Span color="var(--primaryColor)">PANJEL</Span> dolor, sit amet
             consectetur adipisicing elit. Excepturi maxime dolor voluptates
             laudantium fuga eum ipsam vero. Architecto odio, quasi consequuntur
             animi non doloribus, soluta recusandae consequatur, ea commodi
@@ -154,8 +154,8 @@ export const Games = () => {
           }}
         >
           <H2 fontSize="1.3rem" width="80%" textAlign="start" color="white">
-            Higher Value <Span color="var(--orange)">Collaboration</Span> with{' '}
-            <Span color="var(--orange)">Lower</Span> Cost Per Wear
+            Higher Value <Span color="var(--primaryColor)">Collaboration</Span> with{' '}
+            <Span color="var(--primaryColor)">Lower</Span> Cost Per Wear
           </H2>
           <Label
             textAlign="start"
@@ -165,7 +165,7 @@ export const Games = () => {
           >
             dolor, sit amet consectetur
           </Label>
-          <Span display="block" color="var(--orange)">
+          <Span display="block" color="var(--primaryColor)">
             Ver más
           </Span>
         </div>

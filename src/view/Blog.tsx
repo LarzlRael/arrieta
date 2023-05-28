@@ -8,7 +8,7 @@ import useAxiosAuth from '../components/hook/useAxiosAuth'
 import { useNavigate } from 'react-router-dom'
 import { Loading, Loading3 } from '../components/loading/Loading'
 
-export const Blog = (props:any) => {
+export const Blog = (props: any) => {
   const history = useNavigate()
   const categories = [
     {
@@ -40,7 +40,12 @@ export const Blog = (props:any) => {
         <Navigation />
         <div className={styles.Blog}>
           <div className={styles.BlogInfo}>
-            <H2 fontSize="1.5rem" textAlign="left" color="var(--orange)">
+            <H2
+              fontSize="1.5rem"
+              textAlign="left"
+              color="var(--primaryColor)"
+              fontFamily="Montserrat Alternates"
+            >
               Una Joyeria diseñada con cuidado
             </H2>
             <H2
@@ -51,6 +56,7 @@ export const Blog = (props:any) => {
               margin=".5rem 0 0 0"
               fontSizeResponsive="1.5rem"
               marginResponsive="0"
+              fontFamily="Montserrat Alternates"
             >
               The Precius Jewerly Works in life that light up your Way
             </H2>
@@ -60,8 +66,9 @@ export const Blog = (props:any) => {
               color="white"
               fontWeight="500"
               margin="1rem 0 0 0"
+              fontFamily="Montserrat Alternates"
             >
-              Emplowe you yo live exactly as you are in a world <br /> of
+              Employe you yo live exactly as you are in a world <br /> of
               limites posibilies
             </H2>
             <div
@@ -69,7 +76,7 @@ export const Blog = (props:any) => {
                 paddingTop: '3rem',
               }}
             >
-              <NormalButton background="var(--orange)">EXPLORE</NormalButton>
+              <NormalButton background="var(--primaryColor)">EXPLORE</NormalButton>
               <label
                 htmlFor=""
                 style={{
@@ -89,7 +96,7 @@ export const Blog = (props:any) => {
         Discover
         <span
           style={{
-            color: 'var(--orange)',
+            color: 'var(--primaryColor)',
             margin: '0 0.5rem',
           }}
         >
@@ -100,12 +107,12 @@ export const Blog = (props:any) => {
       <H2 fontSizeResponsive="0.8rem">
         Explore out jewellery Collections by categories
       </H2>
-      <div className={styles.BlogCategories}>
-        {/*  <BlogSquare
+      {/*  <BlogSquare
           titleButton="Collares"
           backgroundUrl="https://css.brilliantearth.com/static/img/gateway/GiftsTile_1152x648.jpg"
           gridArea="b1"
         /> */}
+      {/* <div className={styles.BlogCategories}>
         {!loading ? (
           response.map((category, index) => {
             return (
@@ -125,7 +132,7 @@ export const Blog = (props:any) => {
         ) : (
           <Loading />
         )}
-      </div>
+      </div> */}
 
       <Footer />
     </>

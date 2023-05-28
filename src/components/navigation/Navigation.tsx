@@ -1,5 +1,5 @@
 import styles from './Navigation.module.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { IoSearch, IoCar, IoPerson, IoMenu } from 'react-icons/io5'
 import { capitalizeFirstLetter } from '../../utils/utilsText'
 import { H2 } from '../text'
@@ -7,9 +7,11 @@ import { useState } from 'react'
 import { IconContext } from 'react-icons'
 import { FaTimes, FaBars } from 'react-icons/fa'
 import { useWindowSize } from '../hook/useWindowSize'
+import { storeName } from '../../utils/contants'
 export const Navigation = () => {
   const links = ['blog', 'games', 'Colaboration', 'Contact']
   const [openMenu, setOpenMenu] = useState<boolean>(true)
+  const navigate = useNavigate()
   const {
     windowSize: { width },
   } = useWindowSize()
@@ -28,7 +30,7 @@ export const Navigation = () => {
               {!openMenu ? <FaTimes /> : <FaBars />}
             </div>
           </IconContext.Provider>
-          <H2 color="white">Joyeria Arrieta</H2>
+          <H2 color="white">{storeName}</H2>
         </div>
         <div
           className={
@@ -47,8 +49,15 @@ export const Navigation = () => {
       </div>
       {width > 768 && <NavigationIcons />}
 
-      <div className={styles.NavigationLogo}>
-        <H2 color="white">Joyeria Arrieta</H2>
+      <div className={styles.NavigationLogo} onClick={() => navigate('/')}>
+        <H2
+          colorHover="var(--primaryColor)"
+          color="white"
+          fontFamily="Montserrat Alternates"
+          fontWeight="500"
+        >
+          {storeName}
+        </H2>
       </div>
     </div>
   )
