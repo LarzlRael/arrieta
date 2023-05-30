@@ -1,11 +1,12 @@
 import { H2 } from '../components/text/H2'
-import styles from './Games.module.css'
+import styles from './Products.module.css'
 import { Label } from '../components/text/Label'
 import { BoxFlex } from '../components/box/BoxFlex'
 import { Span } from '../components/text/Span'
 import { Box } from '../components/box'
 import { Footer } from '../components/navigation/Footer'
-export const Games = () => {
+import { storeName } from '../utils/contants'
+export const Products = () => {
   const images = [
     /* lorem images */
     'https://via.placeholder.com/250',
@@ -18,14 +19,7 @@ export const Games = () => {
       <div className={styles.GameContainer}>
         <div className={styles.GameInfo}>
           <H2 color="white" textAlign="start" fontSize="2.5rem">
-            Special Package{' '}
-            <span
-              style={{
-                color: 'var(--primaryColor)',
-              }}
-            >
-              Jewery
-            </span>
+            Special Package <Span color="var(--primaryColor)">Jewery</Span>
           </H2>
           <Label color="white" fontSize="1.1rem" margin="1rem 0">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
@@ -41,11 +35,14 @@ export const Games = () => {
         fontSize="2rem"
         margin="2rem 0"
         fontSizeResponsive="1rem"
+        fontFamily="Montserrat Alternates"
+        fontWeight="500"
       >
-        Handmake <Span color="var(--primaryColor)">high Quality</Span> control
+        Fabricación artesanal con estricto{' '}
+        <Span color="var(--primaryColor)"> control de calidad</Span> control
       </H2>
       <div className={styles.GameImageContainer}>
-        {images.map((img,i) => {
+        {images.map((img, i) => {
           return (
             <img
               key={i}
@@ -68,7 +65,7 @@ export const Games = () => {
         marginResponsive="0 1rem"
       >
         <H2 color="white" fontSize="2.5rem">
-          Must <Span color="var(--primaryColor)">Have</Span> collection
+          Colección <Span color="var(--primaryColor)">imprescindible</Span>
         </H2>
         <Label
           textAlign="center"
@@ -77,10 +74,11 @@ export const Games = () => {
           fontSize="1.2rem"
           marginResponsive="1rem 0"
         >
-          <Span color="var(--primaryColor)">PANJEL</Span> dolor, sit amet consectetur
-          adipisicing elit. Excepturi maxime dolor voluptates laudantium fuga
-          eum ipsam vero. Architecto odio, quasi consequuntur animi non
-          doloribus, soluta recusandae consequatur, ea commodi sapiente?
+          <Span color="var(--primaryColor)">{storeName}</Span> dolor, sit amet
+          consectetur adipisicing elit. Excepturi maxime dolor voluptates
+          laudantium fuga eum ipsam vero. Architecto odio, quasi consequuntur
+          animi non doloribus, soluta recusandae consequatur, ea commodi
+          sapiente?
         </Label>
         <BoxFlex direction="row">
           <img
@@ -117,8 +115,8 @@ export const Games = () => {
             textAlign="start"
             margin="0 0 2rem 0"
           >
-            Higher Value <Span color="var(--primaryColor)">Collaboration</Span> with{' '}
-            <Span color="var(--primaryColor)">Lower</Span> Cost Per Wear
+            Higher Value <Span color="var(--primaryColor)">Collaboration</Span>{' '}
+            with <Span color="var(--primaryColor)">Lower</Span> Cost Per Wear
           </H2>
           <Label
             textAlign="start"
@@ -126,7 +124,7 @@ export const Games = () => {
             fontSize="1.1rem"
             lineHeight="1.6"
           >
-            <Span color="var(--primaryColor)">PANJEL</Span> dolor, sit amet
+            <Span color="var(--primaryColor)">{storeName}</Span> dolor, sit amet
             consectetur adipisicing elit. Excepturi maxime dolor voluptates
             laudantium fuga eum ipsam vero. Architecto odio, quasi consequuntur
             animi non doloribus, soluta recusandae consequatur, ea commodi
@@ -154,8 +152,8 @@ export const Games = () => {
           }}
         >
           <H2 fontSize="1.3rem" width="80%" textAlign="start" color="white">
-            Higher Value <Span color="var(--primaryColor)">Collaboration</Span> with{' '}
-            <Span color="var(--primaryColor)">Lower</Span> Cost Per Wear
+            Higher Value <Span color="var(--primaryColor)">Collaboration</Span>{' '}
+            with <Span color="var(--primaryColor)">Lower</Span> Cost Per Wear
           </H2>
           <Label
             textAlign="start"

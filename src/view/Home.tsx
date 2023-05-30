@@ -1,6 +1,6 @@
-import styles from './Blog.module.css'
+import styles from './Home.module.css'
 import { Navigation } from '../components/navigation/Navigation'
-import { H2 } from '../components/text'
+import { H2, Span } from '../components/text'
 import { NormalButton } from '../components/buttons'
 import styled from 'styled-components'
 import { Footer } from '../components/navigation/Footer'
@@ -8,7 +8,7 @@ import useAxiosAuth from '../components/hook/useAxiosAuth'
 import { useNavigate } from 'react-router-dom'
 import { Loading, Loading3 } from '../components/loading/Loading'
 
-export const Blog = (props: any) => {
+export const Home = (props: any) => {
   const history = useNavigate()
   const categories = [
     {
@@ -36,10 +36,10 @@ export const Blog = (props: any) => {
   })
   return (
     <>
-      <div className={styles.BlogContainer}>
+      <div className={styles.HomeContainer}>
         <Navigation />
-        <div className={styles.Blog}>
-          <div className={styles.BlogInfo}>
+        <div className={styles.Home}>
+          <div className={styles.HomeInfo}>
             <H2
               fontSize="1.5rem"
               textAlign="left"
@@ -58,7 +58,7 @@ export const Blog = (props: any) => {
               marginResponsive="0"
               fontFamily="Montserrat Alternates"
             >
-              The Precius Jewerly Works in life that light up your Way
+              Las joyas preciosas funcionan en la vida iluminando tu camino.
             </H2>
             <H2
               fontSize="1.3rem"
@@ -68,55 +68,51 @@ export const Blog = (props: any) => {
               margin="1rem 0 0 0"
               fontFamily="Montserrat Alternates"
             >
-              Employe you yo live exactly as you are in a world <br /> of
-              limites posibilies
+              Descubre cómo nuestras joyas preciosas realzan tu estilo en un
+              mundo de posibilidades ilimitadas.
             </H2>
             <div
               style={{
                 paddingTop: '3rem',
               }}
             >
-              <NormalButton background="var(--primaryColor)">EXPLORE</NormalButton>
-              <label
-                htmlFor=""
-                style={{
-                  color: 'transparent',
-                }}
-              >
-                que o
-              </label>
+              <NormalButton background="var(--primaryColor)">
+                EXPLORAR
+              </NormalButton>
+
               <NormalButton ghost={true} background="white">
-                PRODUCT
+                PRODUCTOS
               </NormalButton>
             </div>
           </div>
         </div>
       </div>
-      <H2 fontSize="2.5rem" margin="2.5rem 0" fontSizeResponsive="1rem">
-        Discover
-        <span
-          style={{
-            color: 'var(--primaryColor)',
-            margin: '0 0.5rem',
-          }}
-        >
-          Jewellery
-        </span>
-        Colection
+      <H2
+        fontSize="2.5rem"
+        margin="2.5rem 0"
+        fontSizeResponsive="1rem"
+        fontFamily="Montserrat Alternates"
+      >
+        Descubre nuestra
+        <Span color="var(--primaryColor)" margin="0 0.5rem" fontWeight="500">
+          Colección de Joyas
+        </Span>
       </H2>
-      <H2 fontSizeResponsive="0.8rem">
-        Explore out jewellery Collections by categories
+      <H2 fontSizeResponsive="0.8rem" fontFamily="Montserrat Alternates">
+        {/* Explore out jewellery Collections by categories
+         */}
+        Explora nuestras colecciones de joyas por categorias
       </H2>
-      {/*  <BlogSquare
+      {/*  <HomeSquare
           titleButton="Collares"
           backgroundUrl="https://css.brilliantearth.com/static/img/gateway/GiftsTile_1152x648.jpg"
           gridArea="b1"
         /> */}
-      {/* <div className={styles.BlogCategories}>
+      {/* <div className={styles.HomeCategories}>
         {!loading ? (
           response.map((category, index) => {
             return (
-              <BlogSquare
+              <HomeSquare
                 key={category.name}
                 titleButton={category.name}
                 navigateFunction={history}
@@ -150,7 +146,7 @@ const ContainerBackGround = styled.div<any>`
   justify-content: center;
 `
 
-const BlogSquare = ({
+const HomeSquare = ({
   titleButton,
   backgroundUrl,
   gridArea,
@@ -167,7 +163,7 @@ const BlogSquare = ({
       gridArea={gridArea}
     >
       <button
-        className={styles.BlogButton}
+        className={styles.HomeButton}
         onClick={() => navigateFunction(`/categorias/${id}`)}
       >
         {titleButton}

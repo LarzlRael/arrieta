@@ -1,7 +1,7 @@
 import { RouterProps, useParams } from 'react-router-dom'
 import { Navigation } from '../components/navigation/Navigation'
 import useAxiosAuth from '../components/hook/useAxiosAuth'
-import { Loading, Loading3 } from '../components/loading/Loading';
+import { Loading, Loading3 } from '../components/loading/Loading'
 export const Category = () => {
   const { categoria } = useParams<{
     categoria: string
@@ -14,7 +14,6 @@ export const Category = () => {
     <div>
       <Navigation />
       <h1>{categoria}</h1>
-      {/* <Loading3 /> */}
       {!loading ? <h1>que fue gente</h1> : <Loading />}
     </div>
   )

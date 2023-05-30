@@ -32,8 +32,22 @@
 .NavigationLogoWithLinks {
   display: none;
 }
-.NavigationLinks {
+.NavigationLinks svg {
+  cursor: pointer;
 }
+.HoverEffect {
+  color: white;
+  transition: 0.5s ease all;
+  width: 100;
+  cursor: pointer;
+  &:hover {
+    color: var(--primaryColor);
+    /* font-weight: 500;
+    border-bottom: 2px solid var(--primaryColor); */
+  }
+}
+
+
 @media (max-width: 480px) {
   .Navigation {
     width: 100%;

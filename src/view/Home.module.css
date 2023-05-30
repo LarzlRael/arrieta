@@ -1,4 +1,4 @@
-.Blog {
+.BloHome {
   /* background-color: red; */
   /* width: 100%;
   height: 100vh;
@@ -8,11 +8,11 @@
   background-size: 900px 550px;
   background-position: 100% 0%; */
 }
-.BlogInfo {
+.HomeInfo {
   margin: 3rem 0;
   width: 50%;
 }
-.BlogContainer {
+.HomeContainer {
   padding: 2rem;
   background: var(--pink);
   width: 100%;
@@ -23,7 +23,7 @@
   background-size: 900px 550px;
   background-position: 100% 80%;
 }
-.BlogCategories {
+.HomeCategories {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   height: 300px;
@@ -31,7 +31,7 @@
   gap: 1.5rem;
 }
 
-.BlogButton {
+.HomeButton {
   background: rgba(var(--orangeRGB), 0.65);
   border: none;
   color: white;
@@ -41,18 +41,18 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.BlogButton:hover {
+.HomeButton:hover {
   background: rgba(var(--orangeRGB), 0.85);
 }
 /* media querys */
 @media (max-width: 768px) {
-  .BlogCategories {
+  .HomeCategories {
       height: 700px;
     padding: 1rem;
     gap: 1rem;
     /* grid-template-columns: 1fr; */
   }
-  .BlogInfo {
+  .HomeInfo {
     width: 100%;
     padding: 2rem;
     display: flex;
@@ -61,7 +61,7 @@
     /* justify-content: center; */
     height: 100vh;
   }
-  .BlogContainer {
+  .HomeContainer {
     background-position: 100% 0%;
     padding: 0;
     background-repeat: no-repeat;

@@ -9,7 +9,16 @@ import { FaTimes, FaBars } from 'react-icons/fa'
 import { useWindowSize } from '../hook/useWindowSize'
 import { storeName } from '../../utils/contants'
 export const Navigation = () => {
-  const links = ['blog', 'games', 'Colaboration', 'Contact']
+  const links = [
+    {
+      name: 'Inicio',
+      url: 'home',
+    },
+    {
+      name: 'Productos',
+      url: 'productos',
+    },
+  ]
   const [openMenu, setOpenMenu] = useState<boolean>(true)
   const navigate = useNavigate()
   const {
@@ -40,8 +49,12 @@ export const Navigation = () => {
           }
         >
           {links.map((link) => (
-            <NavLink className={styles.Link} to={`/${link}`} key={link}>
-              {capitalizeFirstLetter(link)}
+            <NavLink
+              className={styles.Link}
+              to={`/${link.url}`}
+              key={link.name}
+            >
+              {capitalizeFirstLetter(link.name)}
             </NavLink>
           ))}
           {width < 768 && <NavigationIcons />}
@@ -64,12 +77,25 @@ export const Navigation = () => {
 }
 
 const NavigationIcons = () => {
-  const size = 30
+  const size = '35'
   return (
-    <div>
-      <IoSearch color="white" size={size} />
-      <IoCar color="white" size={size} />
-      <IoPerson color="white" size={size} />
-    </div>
+    <IconContext.Provider
+      value={{
+        /* color: 'blue', */
+        /* size: size, */
+        className: styles.HoverEffect,
+      }}
+    >
+      <div className={styles.IconsContainer}>
+        <IoSearch size={size} />
+        <IoCar
+          style={{
+            margin: '0 10px',
+          }}
+          size={size}
+        />
+        <IoPerson size={size} />
+      </div>
+    </IconContext.Provider>
   )
 }

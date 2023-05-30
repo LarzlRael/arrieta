@@ -1,23 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 /* import { sizeMedia } from '../../../styles/mediaQuerys' */
-const SpanStyled = styled.span<{
-  fontSize?: string
-  color?: string
-  margin?: string
-  textAlign?: 'center' | 'start' | 'end' | 'left' | 'right' | 'justify'
-  fontWeight?:
-    | 'normal'
-    | 'bold'
-    | 'bolder'
-    | 'lighter'
-    | 'initial'
-    | 'inherit'
-    | string
-  marginResponsive?: string
-  display?: string
-}>`
-  /* font-size: ${(props) => props.fontSize || '18px'}; */
+const SpanStyled = styled.span<SpanProps>`
   color: ${({ color }) => (color ? color : '#292828')};
   display: ${({ display }) => (display ? display : 'inline-block')};
   margin-top: 1rem;
@@ -29,7 +13,6 @@ interface SpanProps {
   fontSize?: string
   color?: string
   margin?: string
-
   textAlign?: 'center' | 'start' | 'end' | 'left' | 'right' | 'justify'
   fontWeight?: string
   children: React.ReactNode
